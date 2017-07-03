@@ -66,7 +66,6 @@ module.exports = {
                 use : [
                     'style-loader',
                     'css-loader',
-                    'sass-loader',
                     {
                         loader: 'postcss-loader',
                         options: {           // 如果没有options这个选项将会报错 No PostCSS Config found
@@ -77,7 +76,8 @@ module.exports = {
                                 require('cssnano')()  //压缩css
                             ]
                         }
-                    }
+                    },
+                    'sass-loader'
                 ]
             },
             {
