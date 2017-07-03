@@ -47,17 +47,17 @@ module.exports = {
                 use: [
                     'style-loader',
                     'css-loader',
-                    {
-                        loader: 'postcss-loader',
-                        options: {           // 如果没有options这个选项将会报错 No PostCSS Config found
-                            plugins: (loader) => [
-                                    require('postcss-px2rem')({remUnit: 75}),
-                                    require('postcss-import')({root: loader.resourcePath}),
-                                    require('autoprefixer')({ browsers: ['ie>=8', '>1% in CN']}), //CSS浏览器兼容
-                                    require('cssnano')()  //压缩css
-                            ]
-                        }
-                    }
+                    // {
+                    //     loader: 'postcss-loader',
+                    //     options: {           // 如果没有options这个选项将会报错 No PostCSS Config found
+                    //         plugins: (loader) => [
+                    //                 require('postcss-px2rem')({remUnit: 75}),
+                    //                 require('postcss-import')({root: loader.resourcePath}),
+                    //                 require('autoprefixer')({ browsers: ['ie>=8', '>1% in CN']}), //CSS浏览器兼容
+                    //                 require('cssnano')()  //压缩css
+                    //         ]
+                    //     }
+                    // }
                 ]
 
             },
@@ -71,7 +71,7 @@ module.exports = {
                         loader: 'postcss-loader',
                         options: {           // 如果没有options这个选项将会报错 No PostCSS Config found
                             plugins: (loader) => [
-                                require('postcss-px2rem')({remUnit: 75}),
+                                require('postcss-px2rem')({remUnit:16}),
                                 require('postcss-import')({root: loader.resourcePath}),
                                 require('autoprefixer')({ browsers: ['ie>=8', '>1% in CN']}), //CSS浏览器兼容
                                 require('cssnano')()  //压缩css

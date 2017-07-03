@@ -6,35 +6,18 @@ Vue.use(VueRouter);
 //数据请求
 import VueResource from 'vue-resource';
 Vue.use(VueResource);
-//UI库
-import Element from 'element-ui'
-import 'element-ui/lib/theme-default/index.css'
-Vue.use(Element);
-
+//mint-ui库
+import Mint from 'mint-ui';
+import 'mint-ui/lib/style.css';
+Vue.use(Mint);
 //开启debug模式
 Vue.config.debug = true;
-// 定义组件, 也可以像教程之前教的方法从别的文件引入
-const First = { template: '<div><h2>我是第 1 个子页面</h2></div>'};
-import secondcomponent from './component/secondcomponent.vue'
-
 // 创建一个路由器实例
 // 并且配置路由规则
-const router = new VueRouter({
-    mode: 'history',
-    base: __dirname,
-    routes: [
-        {
-            path: '/first',
-            component: First
-        },
-        {
-            path: '/second',
-            component: secondcomponent
-        }
-    ]
-});
+import obj from './router'
+const router = new VueRouter(obj);
 
-// 现在我们可以启动应用了！
+// 启动应用
 // 路由器会创建一个 App 实例，并且挂载到选择符 #app 匹配的元素上。
 const app = new Vue({
     router: router,
