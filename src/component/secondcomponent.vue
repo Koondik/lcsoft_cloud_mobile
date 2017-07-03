@@ -13,6 +13,7 @@
     </div>
 </template>
 <script type="text/javascript">
+    require('./test.scss');
     import axios from 'axios'
     export default{
         data(){
@@ -38,25 +39,3 @@
         }
     }
 </script>
-<style>
-    .text {
-        font-size: 14px;
-    }
-
-    .item {
-        padding: 18px 0;
-    }
-
-    .clearfix:before,
-    .clearfix:after {
-        display: table;
-        content: "";
-    }
-    .clearfix:after {
-        clear: both
-    }
-
-    .box-card {
-        width: 480px;
-    }
-</style>

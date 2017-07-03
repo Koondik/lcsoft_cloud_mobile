@@ -1,0 +1,29 @@
+.test{
+  font-size:36px;
+  display:flex;
+;  transform:translate(50%);
+  background-image:url("/src/assets/logo.png");
+  height:750px
+}
+.text {
+  flex:1;
+  font-size: 14px;
+}
+
+.item {
+  flex:1;
+  padding: 18px 0;
+}
+
+.clearfix:before,
+.clearfix:after {
+  display: table;
+  content: "";
+}
+.clearfix:after {
+  clear: both
+}
+
+.box-card {
+  width: 480px;
+}
