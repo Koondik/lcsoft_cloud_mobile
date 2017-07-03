@@ -1,6 +1,6 @@
 <template>
     <div id="app">
-        <img src="./assets/logo.png">
+        <img src="imgs/logo.png">
         <h1>{{msg}}</h1>
         <secondcomponent></secondcomponent>
         <firstcomponent></firstcomponent>
@@ -25,7 +25,6 @@
         components:{ firstcomponent , secondcomponent }
     }
 </script>
-
 <style lang="scss">
   body{
       font-family:Helvetica , sans-serif;

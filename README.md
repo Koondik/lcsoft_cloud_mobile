@@ -1,4 +1,4 @@
-# lcsoft_cloud_mobile
+# edu_cloud_app
 
 > A Vue.js project
 
