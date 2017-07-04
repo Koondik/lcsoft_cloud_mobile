@@ -11,7 +11,6 @@
     </div>
 </template>
 <script type="text/javascript">
-    require('./test.scss');
     import axios from 'axios'
     export default {
         data(){

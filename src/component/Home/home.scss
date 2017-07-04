@@ -1,0 +1,15 @@
+$bgColor:#f5f8fa;
+#home{
+  background-color:$bgColor;
+  a{
+    text-decoration:none;
+  }
+  .mint-tabbar{
+    border-top:1px solid #e6f1ff;
+    .mint-tab-item-icon{
+      i{
+        font-size:24px;
+      }
+    }
+  }
+}

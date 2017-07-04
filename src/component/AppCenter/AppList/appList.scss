@@ -1,0 +1,34 @@
+$bgColor:#f5f7fa;
+#appList{
+  width:100%;
+  background-color:$bgColor;
+  section{
+    .mint-search{
+      height: 100%;
+    }
+    .mint-search-list{
+      display:none;
+    }
+    .mint-searchbar{
+      background-color:#fff;
+      .mint-searchbar-inner{
+        position:relative;
+        text-align:center;
+        background-color:$bgColor;
+        input{
+          background-color:$bgColor;
+          font-size:12px;
+          text-align:center;
+        }
+        i{
+          position:absolute;
+          left:27%;
+          color:#a3a3a3;
+        }
+      }
+      .mint-searchbar-cancel{
+        display:none;
+      }
+    }
+  }
+}

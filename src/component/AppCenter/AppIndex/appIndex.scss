@@ -1,0 +1,49 @@
+$bgColor:#f5f7fa;
+#appIndex{
+  width:100%;
+  background-color:$bgColor;
+  .mint-swipe{
+    height:150px;
+  }
+  .cell-split-2{
+    background-color:#fff;
+    margin-top:10px;
+    display:flex;
+    padding:16px;
+    > div{
+        flex:1;
+        display:flex;
+        .icon-wrap{
+          width:40%;
+          display:flex;
+          justify-content:center;
+          i{
+            font-size:30px;
+            color:#4e97d9;
+          }
+        }
+        .item-card{
+          width:60%;
+          display:flex;
+          flex-wrap:wrap;
+          h4,p{
+            width:100%;
+            margin:0;
+          }
+          h4{
+            font-size:13px;
+            font-weight:500;
+            margin-bottom:5.5px;
+          }
+          p{
+            font-size:11px;
+            color:#989898;
+          }
+        }
+    }
+    > div:first-child{
+      border-right:1px solid #e0e0e0;
+    }
+  }
+
+}

@@ -1,19 +1,24 @@
 // 定义组件, 也可以像教程之前教的方法从别的文件引入
-// const First = {template : '<div><h2>我是第 1 个子页面</h2></div>'};
+import home from './component/Home/home.vue';
 import login from './component/Login/login.vue';
-import secondcomponent from './component/secondcomponent.vue';
+import appList from './component/AppCenter/AppList/appList.vue';
 export default {
     mode : 'history',
     base : __dirname,
     routes : [
+        {
+            path : '/home',
+            name:'home',
+            component : home
+        },
         {
             path : '/login',
             name:'login',
             component : login
         },
         {
-            path : '/second',
-            component : secondcomponent
+            path : '/appList',
+            component : appList
         },
         {   //路由重定向
             path: '',
