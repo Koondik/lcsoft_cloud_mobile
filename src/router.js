@@ -3,7 +3,7 @@ import home from './component/Home/home.vue';
 import login from './component/Login/login.vue';
 import appList from './component/AppCenter/AppList/appList.vue';
 export default {
-    mode : 'history',
+    mode: 'history',
     base : __dirname,
     routes : [
         {
@@ -27,10 +27,12 @@ export default {
         }
     ],
     scrollBehavior (to, from, savedPosition) {
-        if (savedPosition) {
-            return savedPosition
-        } else {
-            return { x: 0, y: 0 }
-        }
+        // console.log(savedPosition);
+        return { x: 0, y: 0 };
+        // if (savedPosition) {
+        //     return savedPosition
+        // } else {
+        //     return { x: 0, y: 0 }
+        // }
     }
 };

@@ -26,7 +26,7 @@
             <div class="cell-info">
                 <h4>缺勤了，补个假条吧!</h4>
                 <p>10:00&nbsp;数学课缺勤啦</p>
-                <a href="appList">立即填写</a>
+                <router-link to="/appList">立即填写</router-link>
             </div>
         </mt-cell>
         <mt-cell class="divider">
