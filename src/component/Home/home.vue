@@ -1,6 +1,6 @@
 <template>
     <div id="home">
-        <mt-tab-container v-model="selected">
+        <mt-tab-container v-model="selected" swipeable="">
             <mt-tab-container-item id="消息">
                 1
                 <!--<mt-cell v-for="n in 10" title="tab-container 1"></mt-cell>-->
@@ -14,7 +14,7 @@
                 <!--<mt-cell v-for="n in 7" title="tab-container 3"></mt-cell>-->
             </mt-tab-container-item>
         </mt-tab-container>
-        <mt-tabbar v-model="selected">
+        <mt-tabbar v-model="selected" fixed>
             <mt-tab-item id="消息">
                 <i slot="icon" class="iconfont icon-xiaoxi"></i>
                 消息

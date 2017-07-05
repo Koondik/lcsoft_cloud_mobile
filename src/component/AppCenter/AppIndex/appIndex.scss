@@ -2,6 +2,12 @@ $bgColor:#f5f7fa;
 #appIndex{
   width:100%;
   background-color:$bgColor;
+  .divider{
+    margin-top:10px;
+  }
+  .divider-line{
+    border-bottom:1px solid #e0e0e0;
+  }
   .mint-swipe{
     height:150px;
   }
@@ -11,39 +17,46 @@ $bgColor:#f5f7fa;
     display:flex;
     padding:16px;
     > div{
-        flex:1;
-        display:flex;
         .icon-wrap{
           width:40%;
-          display:flex;
-          justify-content:center;
-          i{
-            font-size:30px;
-            color:#4e97d9;
-          }
         }
         .item-card{
           width:60%;
-          display:flex;
-          flex-wrap:wrap;
-          h4,p{
-            width:100%;
-            margin:0;
-          }
-          h4{
-            font-size:13px;
-            font-weight:500;
-            margin-bottom:5.5px;
-          }
-          p{
-            font-size:11px;
-            color:#989898;
-          }
         }
     }
     > div:first-child{
       border-right:1px solid #e0e0e0;
     }
   }
-
+  .mint-cell{
+    padding:5px 0;
+    .mint-cell-value{
+      width:100%;
+    }
+    .cell-info{
+      width:100%;
+      text-align:center;
+      h4{
+        margin:12px 0;
+        font-size:20px;
+        color:#5a5a5a;
+        font-weight:600;
+      }
+      p{
+        font-size:13px;
+        color:#b1b1b1;
+      }
+      a{
+        display:block;
+        margin-top:25px;
+        padding:19px 0;
+        border-top:1px solid #f0f0f0;
+      }
+    }
+  }
+  .mint-cell-allow-right::after {
+    border-color: #4e97d9;
+    width: 8px;
+    height: 8px;
+  }
 }

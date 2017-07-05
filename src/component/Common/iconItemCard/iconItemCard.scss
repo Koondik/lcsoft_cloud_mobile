@@ -1,0 +1,16 @@
+#iconItemCard{
+  flex:1;
+  display:flex;
+  .icon-wrap{
+    width:20%;
+    display:flex;
+    justify-content:center;
+    i{
+      font-size:30px;
+      color:#4e97d9;
+    }
+  }
+  .item-card{
+    width:80%;
+  }
+}

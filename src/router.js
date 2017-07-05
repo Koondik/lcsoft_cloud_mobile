@@ -18,11 +18,19 @@ export default {
         },
         {
             path : '/appList',
+            name:'appList',
             component : appList
         },
         {   //路由重定向
             path: '',
             redirect: { name: 'login' }
         }
-    ]
+    ],
+    scrollBehavior (to, from, savedPosition) {
+        if (savedPosition) {
+            return savedPosition
+        } else {
+            return { x: 0, y: 0 }
+        }
+    }
 };

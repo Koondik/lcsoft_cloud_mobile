@@ -1,32 +1,35 @@
 <template>
     <div id="app">
-        <!--<mt-header fixed title="固定在顶部">-->
-            <!--<mt-button v-link="'/'" icon="back" slot="left">返回</mt-button>-->
-            <!--<mt-button icon="more" slot="right"></mt-button>-->
-        <!--</mt-header>-->
-        <!--<h1>{{msg}}</h1>-->
-        <!--<secondcomponent></secondcomponent>-->
-        <!--<firstcomponent></firstcomponent>-->
-        <!--<ul>-->
-            <!--<li><router-link to="/first">点我跳转到第一页</router-link></li>-->
-            <!--<li><router-link to="/second">点我跳转到第二页</router-link></li>-->
-        <!--</ul>-->
-        <router-view class="view"></router-view>
+        <transition  :name="transitionName">
+            <!--name="page"-->
+            <router-view class="view"></router-view>
+        </transition>
     </div>
 </template>
-
-<script>
-//    import firstcomponent from './component/firstcomponent.vue'
-//    import secondcomponent from './component/secondcomponent.vue'
-//    export default {
-//        name : 'app',
-//        data () {
-//            return {
-//                msg : 'Hello App!'
-//            }
-//        },
-//        components:{ firstcomponent , secondcomponent }
-//    }
+<script type="text/javascript">
+    export default {
+        name: 'app',
+        data () {
+            return {
+                transitionName: 'slide-left'
+            }
+        },
+        mounted () {
+        },
+        //监听路由的路径，可以通过不同的路径去选择不同的切换效果
+        watch: {
+            '$route' (to, from) {
+                const toDepth = to.path.split('/').length;
+                const fromDepth = from.path.split('/').length;
+                this.transitionName = toDepth < fromDepth ? 'slide-right' : 'slide-left'
+//                if(to.path == '/'){
+//                    this.transitionName = 'slide-right';
+//                }else{
+//                    this.transitionName = 'slide-left';
+//                }
+            }
+        }
+    }
 </script>
 <style lang="scss">
     body{ font-family:Helvetica, sans-serif; margin:0; padding:0; }
@@ -51,4 +54,40 @@
     .none{display:none}
     .left{float:left}
     .right{float:right}
+
+    .view{
+        transition: all .3s;
+    }
+    .slide-left-enter, .slide-right-leave-active {
+        opacity: 0;
+        -webkit-transform: translate(30px, 0);
+        transform: translate(30px, 0);
+    }
+    .slide-left-leave-active, .slide-right-enter {
+        opacity: 0;
+        -webkit-transform: translate(-30px, 0);
+        transform: translate(-30px, 0);
+    }
+    /*.page-enter{*/
+        /*transform: translateX(100%);*/
+        /*opacity: 0;*/
+    /*}*/
+    /*.page-enter-active{*/
+        /*transition: all .5s ease;*/
+    /*}*/
+    /*.page-enter-to{*/
+        /*transform: translateX(0);*/
+        /*opacity: 1;*/
+    /*}*/
+    /*.page-leave{*/
+        /*transform: translateX(0);*/
+        /*opacity: 1;*/
+    /*}*/
+    /*.page-leave-active{*/
+        /*transition: all .5s ease;*/
+    /*}*/
+    /*.page-leave-to{*/
+        /*transform: translateX(-100%);*/
+        /*opacity: 0;*/
+    /*}*/
 </style>

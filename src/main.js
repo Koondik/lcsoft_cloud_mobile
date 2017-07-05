@@ -16,7 +16,6 @@ Vue.config.debug = true;
 // 并且配置路由规则
 import obj from './router'
 const router = new VueRouter(obj);
-
 // 启动应用
 // 路由器会创建一个 App 实例，并且挂载到选择符 #app 匹配的元素上。
 const app = new Vue({

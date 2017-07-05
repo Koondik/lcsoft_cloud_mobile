@@ -25,7 +25,7 @@
                 <a href="#">忘记密码</a>
                 <span class="right">
                     还没有账号？
-                    <a href="#">立即注册</a>
+                    <router-link to="/home">立即注册</router-link>
                 </span>
             </p>
         </section>
@@ -40,6 +40,10 @@
                 password: "",
                 isClose:true
             }
+        },
+        mounted () {
+        },
+        watch: {
         }
     }
 </script>
