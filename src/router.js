@@ -1,9 +1,10 @@
 // 定义组件, 也可以像教程之前教的方法从别的文件引入
 import home from './component/Home/home.vue';
-import login from './component/Login/login.vue';
+// import login from './component/Login/login.vue';
+const login = resolve => require(['./component/Login/login.vue'], resolve); //懒加载
 import appList from './component/AppCenter/AppList/appList.vue';
 export default {
-    mode: 'history',
+    mode : 'history',
     base : __dirname,
     routes : [
         {
