@@ -7,7 +7,7 @@ module.exports = {
     entry : './src/main.js',     // 入口文件地址，不需要写完，会自动查找
     output : {
         path : path.resolve(__dirname, './dist'),   // 文件地址，使用绝对路径形式
-        publicPath : '/dist/',   // 公共文件生成的地址
+        publicPath : 'dist/',   // 公共文件生成的地址
         filename : 'build.js'   //[name]这里是webpack提供的根据路口文件自动生成的名字
     },
     module : {
@@ -37,7 +37,7 @@ module.exports = {
             },
             {
                 test : /\.(png|jpg|gif|svg)$/,
-                loader : 'file-loader',
+                loader : 'file-loader', // 资源的引用要用相对路径，否则不能打包资源
                 options : {
                     name : 'static/images/[name].[ext]?[hash]'
                 }

@@ -1,4 +1,5 @@
 // 定义组件, 也可以像教程之前教的方法从别的文件引入
+import index from './component/index.vue';
 import home from './component/Home/home.vue';
 // import login from './component/Login/login.vue';
 const login = resolve => require(['./component/Login/login.vue'], resolve); //懒加载
@@ -8,23 +9,32 @@ export default {
     base : __dirname,
     routes : [
         {
-            path : '/home',
-            name:'home',
-            component : home
+            path : '/index',
+            name:'index',
+            component : index,
+            children:[
+                {
+                    path : 'cloud',
+                    name:'cloud',
+                    component : home
+                },
+                {
+                    path : 'login',
+                    name:'login',
+                    component : login
+                },
+                {
+                    path : 'appList',
+                    name:'appList',
+                    component : appList
+                }
+            ],
+            redirect: '/index/cloud'
         },
-        {
-            path : '/login',
-            name:'login',
-            component : login
-        },
-        {
-            path : '/appList',
-            name:'appList',
-            component : appList
-        },
+
         {   //路由重定向
-            path: '',
-            redirect: { name: 'login' }
+            path: '*',
+            redirect: '/index/cloud'
         }
     ],
     scrollBehavior (to, from, savedPosition) {

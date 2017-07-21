@@ -2,7 +2,7 @@
     <div id="appIndex">
         <mt-swipe :show-indicators="false" :auto="0">
             <mt-swipe-item>
-                <img src="/src/imgs/AppCenter/banner.png" alt="轮播图" width="100%">
+                <img src="../../../imgs/AppCenter/banner.png" alt="轮播图" width="100%">
             </mt-swipe-item>
             <!--<mt-swipe-item>2</mt-swipe-item>-->
             <!--<mt-swipe-item>3</mt-swipe-item>-->
@@ -26,7 +26,7 @@
             <div class="cell-info">
                 <h4>缺勤了，补个假条吧!</h4>
                 <p>10:00&nbsp;数学课缺勤啦</p>
-                <router-link to="/appList">立即填写</router-link>
+                <router-link to="/index/appList">立即填写</router-link>
             </div>
         </mt-cell>
         <mt-cell class="divider">
@@ -35,8 +35,8 @@
         </mt-cell>
         <mt-cell>
             <div  class="cell-info">
-                <img src="/src/imgs/AppCenter/问卷.png" alt="问卷调查" width="100%">
-                <router-link to="/login">参与调查</router-link>
+                <img src="../../../imgs/AppCenter/问卷.png" alt="问卷调查" width="100%">
+                <router-link to="/index/login">参与调查</router-link>
             </div>
         </mt-cell>
     </div>

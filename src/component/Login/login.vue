@@ -2,9 +2,9 @@
     <div id="login">
         <section>
             <div class="login-bg">
-                <img src="/src/imgs/logo-new.png" alt="logo">
+                <img src="../../imgs/logo-new.png" alt="logo">
             </div>
-            <!--<img class="login-bg" src="/src/imgs/login/login-bg.png" alt="登录页背景">-->
+            <!--<img class="login-bg" src="../../imgs/login/login-bg.png" alt="登录页背景">-->
             <div class="input-wrap">
                 <div class="icon-wrap">
                     <i class="iconfont icon-dengluyezhanghao"></i>
@@ -25,7 +25,7 @@
                 <a href="#">忘记密码</a>
                 <span class="right">
                     还没有账号？
-                    <router-link to="/home">立即注册</router-link>
+                    <router-link to="/index/cloud">立即注册</router-link>
                 </span>
             </p>
         </section>
